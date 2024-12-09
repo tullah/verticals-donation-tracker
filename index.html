@@ -10,46 +10,40 @@
 </head>
 <body>
   <div class="container">
-    <h1>Donation Tracker</h1>
-
     <!-- Step 1: Donation Details -->
-    <div id="step-1" class="step">
+    <div id="step-1" class="card step">
       <h2>Step 1: Donation Details</h2>
-      <form>
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="number" id="donationAmount" placeholder="Enter donation amount (USD)" required>
-        </div>
-        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="nextStep(2)">Next</button>
-      </form>
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="number" id="donationAmount" placeholder="Enter donation amount (USD)" required>
+      </div>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="nextStep(2)">Next</button>
     </div>
 
     <!-- Step 2: Donor Information -->
-    <div id="step-2" class="step" style="display: none;">
+    <div id="step-2" class="card step" style="display: none;">
       <h2>Step 2: Your Information</h2>
-      <form>
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" id="donorName" placeholder="Full Name" required>
-        </div>
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="email" id="donorEmail" placeholder="Email Address" required>
-        </div>
-        <button type="button" class="mdl-button mdl-js-button" onclick="prevStep(1)">Back</button>
-        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="nextStep(3)">Next</button>
-      </form>
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="text" id="donorName" placeholder="Full Name" required>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="email" id="donorEmail" placeholder="Email Address" required>
+      </div>
+      <button class="mdl-button mdl-js-button" onclick="prevStep(1)">Back</button>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="nextStep(3)">Next</button>
     </div>
 
     <!-- Step 3: Confirmation -->
-    <div id="step-3" class="step" style="display: none;">
+    <div id="step-3" class="card step" style="display: none;">
       <h2>Step 3: Confirm Your Donation</h2>
       <p><strong>Donation Amount:</strong> <span id="confirmAmount"></span> USD</p>
       <p><strong>Name:</strong> <span id="confirmName"></span></p>
       <p><strong>Email:</strong> <span id="confirmEmail"></span></p>
-      <button type="button" class="mdl-button mdl-js-button" onclick="prevStep(2)">Back</button>
-      <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="submitDonation()">Submit</button>
+      <button class="mdl-button mdl-js-button" onclick="prevStep(2)">Back</button>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="submitDonation()">Submit</button>
     </div>
 
     <!-- Success Message -->
-    <div id="success-message" style="display: none;">
+    <div id="success-message" class="card" style="display: none;">
       <h2>Thank You!</h2>
       <p>Your donation has been successfully submitted!</p>
     </div>
