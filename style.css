@@ -1,48 +1,125 @@
+/* General Styling */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Inter', sans-serif;
+  background-color: #f6f9fc;
   margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
   width: 100%;
+  max-width: 400px;
+  padding: 20px;
 }
 
 .card {
-  background: #fff;
+  background: #ffffff;
+  border-radius: 10px;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  max-width: 400px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
   animation: fadeIn 0.3s ease-in-out;
 }
 
-button {
-  margin: 10px 5px;
+/* Progress Bar */
+.progress-bar {
+  height: 4px;
+  background-color: #e0e0e0;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #6772e5;
+  width: 0%;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Titles */
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d1d1;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  border-color: #6772e5;
+  outline: none;
+  box-shadow: 0px 0px 4px rgba(103, 114, 229, 0.5);
+}
+
+/* Buttons */
+.button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.next-button {
+  background-color: #6772e5;
+  color: white;
+}
+
+.next-button:hover {
+  background-color: #5469d4;
+}
+
+.back-button {
+  background-color: #f6f9fc;
+  color: #6772e5;
+  border: 1px solid #6772e5;
+}
+
+.back-button:hover {
+  background-color: #e0e7ff;
+}
+
+/* Confirmation Details */
+.confirmation-detail {
+  margin: 10px 0;
+  font-size: 16px;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.step {
-  display: none;
-}
