@@ -7,11 +7,11 @@ function nextStep(step) {
   // Show the selected step
   document.getElementById(`step-${step}`).style.display = "block";
 
-  // Update confirmation data on Step 3
+  // Update confirmation data for Step 3
   if (step === 3) {
-    document.getElementById("confirmAmount").innerText = document.getElementById("donationAmount").value;
-    document.getElementById("confirmName").innerText = document.getElementById("donorName").value;
-    document.getElementById("confirmEmail").innerText = document.getElementById("donorEmail").value;
+    document.getElementById("confirmAmount").innerText = document.getElementById("donationAmount").value || "0";
+    document.getElementById("confirmName").innerText = document.getElementById("donorName").value || "N/A";
+    document.getElementById("confirmEmail").innerText = document.getElementById("donorEmail").value || "N/A";
   }
 }
 
