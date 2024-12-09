@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation Wizard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="wizard">
+    <h1>Donation Wizard</h1>
+    <div id="step-1" class="wizard-step">
+      <h2>Step 1: Enter Your Donation Amount</h2>
+      <input type="number" id="donationAmount" placeholder="Enter amount (USD)" required>
+      <button onclick="nextStep(2)">Next</button>
+    </div>
+    <div id="step-2" class="wizard-step" style="display: none;">
+      <h2>Step 2: Enter Your Details</h2>
+      <input type="text" id="donorName" placeholder="Your Name" required>
+      <input type="email" id="donorEmail" placeholder="Your Email" required>
+      <button onclick="prevStep(1)">Back</button>
+      <button onclick="nextStep(3)">Next</button>
+    </div>
+    <div id="step-3" class="wizard-step" style="display: none;">
+      <h2>Step 3: Confirm Your Donation</h2>
+      <p><strong>Amount:</strong> <span id="confirmAmount"></span> USD</p>
+      <p><strong>Name:</strong> <span id="confirmName"></span></p>
+      <p><strong>Email:</strong> <span id="confirmEmail"></span></p>
+      <button onclick="prevStep(2)">Back</button>
+      <button onclick="submitDonation()">Submit Donation</button>
+    </div>
+    <div id="success-message" style="display: none;">
+      <h2>Thank You!</h2>
+      <p>Your donation has been successfully tracked.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
