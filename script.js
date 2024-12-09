@@ -4,7 +4,6 @@ function nextStep(step) {
   });
   document.getElementById(`step-${step}`).style.display = "block";
 
-  // Update confirmation data
   if (step === 3) {
     document.getElementById("confirmAmount").innerText = document.getElementById("donationAmount").value;
     document.getElementById("confirmName").innerText = document.getElementById("donorName").value;
@@ -17,16 +16,16 @@ function prevStep(step) {
 }
 
 function submitDonation() {
-  // Mock donation tracking
   const donation = {
     amount: document.getElementById("donationAmount").value,
     name: document.getElementById("donorName").value,
     email: document.getElementById("donorEmail").value,
+    address: document.getElementById("donorAddress").value,
+    cardNumber: document.getElementById("cardNumber").value,
   };
 
-  console.log("Donation tracked:", donation); // Replace this with an API call if connected to a backend.
+  console.log("Donation Submitted:", donation);
 
-  // Show success message
   document.querySelectorAll(".wizard-step").forEach((stepDiv) => {
     stepDiv.style.display = "none";
   });
